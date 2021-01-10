@@ -5,7 +5,6 @@ import Product from "./Product/Product";
 import useStyles from "./styles";
 
 const Products = (props) => {
-  console.log(props);
   const classes = useStyles();
 
   return (
@@ -23,7 +22,7 @@ const Products = (props) => {
               lg={3}
               key={product.id}
             >
-              <Product product={product} />
+              <Product product={product} onAddtoCart={props.onAddtoCart} />
             </Grid>
           );
         })}
